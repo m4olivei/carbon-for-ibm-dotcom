@@ -50,6 +50,7 @@
     "build": "gulp build && yarn wca",
     "build:components": "gulp build:components",
     "build:dist": "gulp build:dist",
+    "build:no-dist": "gulp build:no-dist",
     "build:sass:cdn": "gulp build:sass:cdn",
     "build-storybook": "build-storybook",
     "build-storybook:experimental": "cross-env C4D_FLAGS_ALL=true build-storybook -o storybook-static-experimental",

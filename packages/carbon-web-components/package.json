@@ -33,6 +33,7 @@
     "build": "gulp build && yarn wca",
     "build:dist": "gulp build:dist",
     "build:dist:dev": "gulp build:dist:dev",
+    "build:no-dist": "gulp build:no-dist",
     "build-storybook": "cross-env BABEL_ENV=es build-storybook",
     "ci-check": "yarn wca && yarn typecheck && yarn build && yarn test:unit",
     "clean": "gulp clean",

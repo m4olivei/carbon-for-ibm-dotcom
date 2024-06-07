@@ -1,7 +1,7 @@
 /**
  * @license
  *
- * Copyright IBM Corp. 2020, 2022
+ * Copyright IBM Corp. 2020, 2024
  *
  * This source code is licensed under the Apache-2.0 license found in the
  * LICENSE file in the root directory of this source tree.
@@ -26,5 +26,13 @@ gulp.task(
       gulp.task('build:modules'),
       gulp.task('build:sass')
     )
+  )
+);
+
+gulp.task(
+  'build:no-dist',
+  gulp.series(
+    gulp.task('vendor'),
+    gulp.parallel(gulp.task('build:modules'), gulp.task('build:sass'))
   )
 );
