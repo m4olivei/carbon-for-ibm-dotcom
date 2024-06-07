@@ -23,6 +23,7 @@
   ],
   "scripts": {
     "build": "gulp build",
+    "build:no-dist": "gulp build",
     "ci-check": "yarn typecheck && yarn build && yarn test:unit",
     "clean": "gulp clean",
     "typecheck": "tsc --noEmit -p tsconfig.json",
