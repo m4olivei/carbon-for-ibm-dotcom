@@ -3534,6 +3534,7 @@ __metadata:
     "@babel/plugin-syntax-import-meta": "npm:^7.2.0"
     "@babel/plugin-transform-class-properties": "npm:~7.22.5"
     "@babel/plugin-transform-export-namespace-from": "npm:~7.22.11"
+    "@babel/plugin-transform-typescript": "npm:~7.12.0"
     "@babel/preset-env": "npm:~7.23.2"
     "@ibm/telemetry-js": "npm:^1.5.0"
     "@rollup/plugin-babel": "npm:^5.3.1"
@@ -3565,6 +3566,7 @@ __metadata:
     rollup-plugin-node-builtins: "npm:^2.1.2"
     rollup-plugin-sizes: "npm:^1.0.4"
     striptags: "npm:^3.2.0"
+    typescript: "npm:^5.2.2"
     whatwg-fetch: "npm:^2.0.3"
     window-or-global: "npm:^1.0.1"
   languageName: unknown

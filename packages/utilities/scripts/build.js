@@ -1,5 +1,5 @@
 /**
- * Copyright IBM Corp. 2020, 2023
+ * Copyright IBM Corp. 2020, 2024
  *
  * This source code is licensed under the Apache-2.0 license found in the
  * LICENSE file in the root directory of this source tree.
@@ -33,12 +33,18 @@ const exec = (command, extraEnv) =>
 const ignoreGlobs = ['**/__tests__/*', '**/*.test.js'].join(',');
 
 try {
-  exec(`${babelPath} src --quiet -d es --ignore "${ignoreGlobs}"`, {
-    BABEL_ENV: 'es',
-  });
-  exec(`${babelPath} src --quiet -d lib --ignore "${ignoreGlobs}"`, {
-    BABEL_ENV: 'cjs',
-  });
+  exec(
+    `${babelPath} src --quiet -d es --ignore "${ignoreGlobs}" --extensions=.js,.ts`,
+    {
+      BABEL_ENV: 'es',
+    }
+  );
+  exec(
+    `${babelPath} src --quiet -d lib --ignore "${ignoreGlobs}" --extensions=.js,.ts`,
+    {
+      BABEL_ENV: 'cjs',
+    }
+  );
   exec(
     `${rollupPath} -c scripts/rollup.config.js -o umd/ibmdotcom-utilities.js`,
     {

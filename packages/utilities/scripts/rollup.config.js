@@ -70,6 +70,7 @@ module.exports = {
     nodeResolve({
       browser: true,
       mainFields: ['jsnext', 'module', 'main'],
+      extensions: ['.js', '.ts'],
     }),
     commonjs({
       include: [/node_modules/],
@@ -78,6 +79,7 @@ module.exports = {
     babel.babel({
       babelHelpers: 'bundled',
       exclude: ['node_modules/**'], // only transpile our source code
+      extensions: ['.ts', '.js'],
     }),
     replace({
       'process.env.NODE_ENV': JSON.stringify(env),
