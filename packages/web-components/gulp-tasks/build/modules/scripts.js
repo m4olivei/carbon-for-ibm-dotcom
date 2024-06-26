@@ -43,7 +43,6 @@ function scripts() {
               '@babel/plugin-transform-runtime',
               { useESModules: true, version: '7.3.0' },
             ],
-            '@babel/plugin-syntax-dynamic-import',
             babelPluginResourceJSPaths,
           ],
         })
